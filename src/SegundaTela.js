@@ -43,20 +43,20 @@ export default function SegundaTela() {
 
 
 
-    function shuffleArray(array) {
+    // function shuffleArray(array) {
       
-        for (let i = array.length - 1; i > 0; i--) {
+    //     for (let i = array.length - 1; i > 0; i--) {
         
-            // Generate random number
-            var j = Math.floor(Math.random() * (i + 1));
+    //         // Generate random number
+    //         var j = Math.floor(Math.random() * (i + 1));
                         
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
+    //         var temp = array[i];
+    //         array[i] = array[j];
+    //         array[j] = temp;
+    //     }
             
-        return array;
-     }
+    //     return array;
+    //  }
     
     
 
@@ -74,9 +74,9 @@ export default function SegundaTela() {
         { alternativa: "Usamos props para __", name: " passar diferentes informações para componentes " },
         { alternativa: "Usamos estado (state) para __", name: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" },
       ];
-    let result = shuffleArray(avaliacao);
-    let result1 = result.slice(0,4);
-    console.log(result1[0]);
+    // let result = shuffleArray(avaliacao);
+    // let result1 = result.slice(0,4);
+    // console.log(result1[0]);
 
       
 
@@ -114,7 +114,7 @@ export default function SegundaTela() {
                     </div>}
                 {showAnswer &&
                     <div style={{ display: vermelho1 || laranja1 || verde1 ? "none" : "" }} className="answer1">
-                        <h2>{result1[0].name}</h2>
+                        <h2>{avaliacao[0].name}</h2>
                         <div className="alternatives1">
                             <span onClick={() => { setVermelho1(!vermelho1); increment(); setFooterVermelho1(!footervermelho1) }} >Não lembrei</span>
                             <span onClick={() => { setLaranja1(!laranja1); increment(); setFooterLaranja1(!footerlaranja1) }}>Quase não lembrei</span>
@@ -124,7 +124,7 @@ export default function SegundaTela() {
                 }
                 {showResults1 &&
                     <div style={{ display: showAnswer ? "none" : "" }} className="result1">
-                        <h2>{result1[0].alternativa}</h2>
+                        <h2>{avaliacao[0].alternativa}</h2>
                         <img src="virar.png" alt="virar" onClick={() => setShowAnswer(!showAnswer)} />
                     </div>}
 
@@ -155,7 +155,7 @@ export default function SegundaTela() {
                     </div>}
                 {showAnswer1 &&
                     <div style={{ display: vermelho2 || laranja2 || verde2 ? "none" : "" }} className="answer2">
-                        <h2>{result1[0].name}</h2>
+                        <h2>{avaliacao[1].name}</h2>
                         <div className="alternatives2">
                             <span onClick={() => { setVermelho2(!vermelho2); increment(); setFooterVermelho2(!footervermelho2) }}>Não lembrei</span>
                             <span onClick={() => { setLaranja2(!laranja2); increment(); setFooterLaranja2(!footerlaranja2) }}>Quase não lembrei</span>
@@ -165,7 +165,7 @@ export default function SegundaTela() {
                 }
                 {showResults2 &&
                     <div style={{ display: showAnswer1 ? "none" : "" }} className="result2">
-                        <h2>{result1[0].alternativa}</h2>
+                        <h2>{avaliacao[1].alternativa}</h2>
                         <img src="virar.png" alt="virar" onClick={() => setShowAnswer1(!showAnswer1)} />
                     </div>}
 
@@ -196,7 +196,7 @@ export default function SegundaTela() {
                     </div>}
                 {showAnswer2 &&
                     <div style={{ display: vermelho3 || laranja3 || verde3 ? "none" : "" }} className="answer3">
-                        <h2>{result1[0].name}</h2>
+                        <h2>{avaliacao[2].name}</h2>
                         <div className="alternatives3">
                             <span onClick={() => { setVermelho3(!vermelho3); increment(); setFooterVermelho3(!footervermelho3) }}>Não lembrei</span>
                             <span onClick={() => { setLaranja3(!laranja3); increment(); setFooterLaranja3(!footerlaranja3) }}>Qause não lembrei</span>
@@ -206,7 +206,7 @@ export default function SegundaTela() {
                 }
                 {showResults3 &&
                     <div style={{ display: showAnswer2 ? "none" : "" }} className="result3">
-                        <h2>{result1[0].alternativa}</h2>
+                        <h2>{avaliacao[2].alternativa}</h2>
                         <img src="virar.png" alt="virar" onClick={() => setShowAnswer2(!showAnswer2)} />
                     </div>}
 
@@ -238,7 +238,7 @@ export default function SegundaTela() {
                     </div>}
                 {showAnswer3 &&
                     <div style={{ display: vermelho4 || laranja4 || verde4 ? "none" : "" }} className="answer4">
-                        <h2>{result1[0].name}</h2>
+                        <h2>{avaliacao[3].name}</h2>
                         <div className="alternatives4">
                             <span onClick={() => { setVermelho4(!vermelho4); increment(); setFooterVermelho4(!footervermelho4) }}>Não lembrei</span>
                             <span onClick={() => { setLaranja4(!laranja4); increment(); setFooterLaranja4(!footerlaranja4) }}>Quase não lembrei</span>
@@ -248,7 +248,7 @@ export default function SegundaTela() {
                 }
                 {showResults4 &&
                     <div style={{ display: showAnswer3 ? "none" : "" }} className="result4">
-                        <h2>{result1[0].alternativa}</h2>
+                        <h2>{avaliacao[3].alternativa}</h2>
                         <img src="virar.png" alt="virar" onClick={() => setShowAnswer3(!showAnswer3)} />
                     </div>}
 
